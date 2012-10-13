@@ -132,7 +132,8 @@ class Tumblr {
         if(function_exists("curl_version"))
         {
             $c = curl_init($url);
-            curl_setopt($c,CURLOPT_RETURNTRANSFER,1);
+            curl_setopt($c, CURLOPT_RETURNTRANSFER, 1);
+            curl_setopt($c, CURLOPT_FOLLOWLOCATION, 1);
 	
             $return = curl_exec($c);
 
